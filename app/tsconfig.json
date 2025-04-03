@@ -32,6 +32,9 @@
     },
     "resolveJsonModule": true,
     "esModuleInterop": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true
   },
   "vueCompilerOptions": {
     "target": 2
