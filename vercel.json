@@ -1,0 +1,13 @@
+{
+    "version": 2,
+    "buildCommand": "cd app && meteor npm install && meteor build ../.meteor-build --directory",
+    "outputDirectory": ".meteor-build/bundle",
+    "framework": "node",
+    "env": {
+      "MAIL_URL": "smtp://your-smtp-mail-url",
+      "METEOR_SETTINGS": "{\"public\":{\"environment\":\"production\",\"disablePatreon\":true}}",
+      "ROOT_URL": "https://your-vercel-deployment-url.vercel.app",
+      "NPM_CONFIG_PRODUCTION": "true",
+      "PROJECT_DIR": "app"
+    }
+  }
