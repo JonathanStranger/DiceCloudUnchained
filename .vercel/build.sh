@@ -1,16 +1,18 @@
 #!/bin/bash
 
-# Install Meteor
+# Install Meteor without requiring superuser
 echo "Installing Meteor..."
-curl https://install.meteor.com/ | sh
+curl https://install.meteor.com/?release=2.13.3 -o install_meteor.sh
+chmod +x install_meteor.sh
+METEOR_ALLOW_SUPERUSER=1 sh install_meteor.sh
 
 # Add Meteor to PATH
 export PATH="$HOME/.meteor:$PATH"
 
 # Verify Meteor installation
-meteor --version
+METEOR_ALLOW_SUPERUSER=1 meteor --version
 
 # Continue with your build process
 cd app
-meteor npm install
-meteor build ../.meteor-build --directory
+METEOR_ALLOW_SUPERUSER=1 meteor npm install
+METEOR_ALLOW_SUPERUSER=1 meteor build ../.meteor-build --directory
