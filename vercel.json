@@ -2,7 +2,6 @@
     "version": 2,
     "buildCommand": "cd app && meteor npm install && meteor build ../.meteor-build --directory",
     "outputDirectory": ".meteor-build/bundle",
-    "framework": "node",
     "env": {
       "MAIL_URL": "smtp://your-smtp-mail-url",
       "METEOR_SETTINGS": "{\"public\":{\"environment\":\"production\",\"disablePatreon\":true}}",
