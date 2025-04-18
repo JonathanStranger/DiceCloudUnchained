@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "buildCommand": "cd app && meteor npm install && meteor build ../.meteor-build --directory",
+    "buildCommand": "bash .vercel/build.sh",
     "outputDirectory": ".meteor-build/bundle",
     "env": {
       "MAIL_URL": "smtp://your-smtp-mail-url",
